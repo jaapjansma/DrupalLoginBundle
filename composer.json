@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-0": {
-            "CiviCoop\DrupalLoginBundle": "src/CiviCoop/DrupalLoginBundle"
+            "CiviCoop\\DrupalLoginBundle": ""
         }
-    }
+    },
+	"target-dir": "CiviCoop/DrupalLoginBundle",
 }
