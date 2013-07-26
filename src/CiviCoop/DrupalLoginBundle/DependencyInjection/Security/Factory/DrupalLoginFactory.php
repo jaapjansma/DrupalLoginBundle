@@ -1,6 +1,6 @@
 <?php
 
-namespace CiviCoop\DrupalLoginFactory\DependencyInjection\Security\Factory;
+namespace CiviCoop\DrupalLoginBundle\DependencyInjection\Security\Factory;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
