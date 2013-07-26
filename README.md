@@ -3,6 +3,8 @@ DrupalLoginBundle
 
 Symfony bundle to login with your Drupal username and password. Requires the Service 3.x module within Drupal
 
+This bundle works together with the form_login secuirty configuration of Symfony
+
 Configuration
 -------------
 
@@ -13,13 +15,32 @@ After you have installed the bundle update your AppKernel with
 		new CiviCoop\DrupalLoginBundle\CiviCoopDrupalLoginBundle(),
 	)
 
-Don't forget to configure the bundle with the following settings
+Set the drupal url in app/config/config.yml
 
 	civicoop:
 	     drupal:
 		    login:
 			     url: http://mydrupalsite.org/rest/user/login
 
+Secure your site by adding the drupal key to app/config/security.yml
+    security:
+	    ...
+        providers:
+            ...		
+            drupal:
+                id: drupal.security.authentication.userprovider	
+        firewalls:
+            secured_area:
+                pattern: ^/secured
+                form_login:
+                    check_path: acme_demo_login_check
+                    login_path: acme_demo_login
+                    always_use_default_target_path: true
+                    default_target_path: /
+                logout:
+                    path:   acme_demo_logout
+                    target: /
+                drupal: ~
 
 Requirements on Drupal
 ----------------------
