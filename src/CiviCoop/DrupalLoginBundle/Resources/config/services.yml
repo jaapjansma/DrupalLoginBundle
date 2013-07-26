@@ -1,0 +1,15 @@
+parameters:
+    drupal_user_provider.class: CiviCoop\DurpalLoginBundle\Security\User\DrupalUserProvider
+
+services:
+    civicoor.drupalloginbundle.http:
+        class: CiviCoop\DrupalLoginBundle\Service\Http
+        arguments: []
+    drupal.security.authentication.provider:
+        class:  CiviCoop\DrupalLoginBundle\Security\Authentication\Provider\DrupalProvider
+        arguments: ["@civicoor.drupalloginbundle.http", "%civicoop.drupal.login.url%"]
+    drupal.security.authentication.listener:
+        class:  CiviCoop\DrupalLoginBundle\Security\Firewall\DrupalListener
+        arguments: ["@security.context", "@security.authentication.manager"]
+    drupal.security.authentication.userprovider:
+        class: "%drupal_user_provider.class%"
