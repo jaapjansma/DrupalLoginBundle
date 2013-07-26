@@ -6,7 +6,15 @@ Symfony bundle to login with your Drupal username and password. Requires the Ser
 Configuration
 -------------
 
-After you have installed the bundle configure your application by adding the following lines to config.yml or parameters.yml
+After you have installed the bundle update your AppKernel with
+
+    $bundles = array(
+	    ...
+		new CiviCoop\DrupalLoginBundle\CiviCoopDrupalLoginBundle(),
+	)
+
+Don't forget to configure the bundle with the following settings
+
 	civicoop:
 	     drupal:
 		    login:
