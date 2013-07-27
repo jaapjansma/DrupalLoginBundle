@@ -9,11 +9,13 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.0"
+        "php": ">=5.3.0",
+		"lib-curl": "*"
     },
     "autoload": {
         "psr-0": {
-            "CiviCoop": ""
+            "CiviCoop\\DrupalLoginBundle": ""
         }
-    }
+    },
+	"target-dir": "CiviCoop/DrupalLoginBundle"
 }
