@@ -17,5 +17,5 @@
             "CiviCoop\\DrupalLoginBundle": ""
         }
     },
-	"target-dir": "CiviCoop/DrupalLoginBundle"
+	"target-dir": ""
 }
