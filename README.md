@@ -23,6 +23,7 @@ Set the drupal url in app/config/config.yml
 			     url: http://mydrupalsite.org/rest/user/login
 
 Secure your site by adding the drupal key to app/config/security.yml
+
     security:
 	    ...
         providers:
