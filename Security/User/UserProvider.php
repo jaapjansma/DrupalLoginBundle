@@ -11,7 +11,7 @@ class UserProvider implements UserProviderInterface
 {
     public function loadUserByUsername($username)
     {			
-		$user = new InsiteUser($username, '');
+		$user = new User($username, '');
 		return $user;
     }
 
