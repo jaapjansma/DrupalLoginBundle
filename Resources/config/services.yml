@@ -1,5 +1,5 @@
 parameters:
-    drupal_user_provider.class: CiviCoop\DurpalLoginBundle\Security\User\UserProvider
+    drupal_user_provider.class: CiviCoop\DrupalLoginBundle\Security\User\UserProvider
 
 services:
     civicoor.drupalloginbundle.http:
